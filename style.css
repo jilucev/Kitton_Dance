@@ -1,0 +1,36 @@
+div.kitton-one {
+  background-image: url('images/kitton_one.png');
+  background-repeat: no-repeat;
+  transition: background-position 150ms ease-out;
+  height: 350px;
+  width: 600px;
+  display: inline;
+  float: left;
+  background-position: 0 center;
+
+  background-position: 100% center;
+}
+
+div.kitton-one:hover {
+  background-position: 100% center;
+  background-position: 0 center;
+
+}
+
+div.kitton-two {
+  background-image: url('images/kitton_two.png');
+  background-repeat: no-repeat;
+  transition: background-position 150ms ease-out;
+  height: 350px;
+  width: 600px;
+  display: inline;
+  float: left;
+  background-position: 100% center;
+  background-position: 0 center;
+}
+
+div.kitton-two:hover {
+  background-position: 0 center;
+  background-position: 100% center;
+
+}
