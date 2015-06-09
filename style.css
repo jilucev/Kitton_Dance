@@ -1,36 +1,117 @@
-div.kitton-one {
-  background-image: url('images/kitton_one.png');
-  background-repeat: no-repeat;
-  transition: background-position 150ms ease-out;
+@-webkit-keyframes kitton-down {
+  0% {
+    top: 2em;
+  }
+
+  50% {
+    top: 6em;
+  }
+
+  100% {
+    top: 2em;
+  }
+} 
+
+@-webkit-keyframes kitton-up {
+  0% {
+    top: 6em;
+  }
+
+  50% {
+    top: 2em;
+  }
+
+  100% {
+    top: 6em;
+  }
+}
+
+@-webkit-keyframes kitton-hinge {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes kitton-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes kitton-run {
+  0% {
+    bottom: 2em;
+    right: 2em;
+  }
+
+  50% {
+    bottom: 25em;
+    right: 25em;
+  }
+
+  100% {
+    bottom: 2em;
+    right: 2em;
+  }
+}
+
+.kitton-wrapper-one {
   height: 350px;
   width: 600px;
   display: inline;
   float: left;
-  background-position: 0 center;
-
-  background-position: 100% center;
 }
 
-div.kitton-one:hover {
-  background-position: 100% center;
-  background-position: 0 center;
-
+.kitton-wrapper-one img {
+  -webkit-animation: kitton-up infinite 3s ease-in-out;
 }
 
-div.kitton-two {
-  background-image: url('images/kitton_two.png');
-  background-repeat: no-repeat;
-  transition: background-position 150ms ease-out;
+.kitton-wrapper-one img:hover {
+  -webkit-animation: kitton-spin infinite 3s ease-in-out;
+}
+
+.kitton-wrapper-two {
   height: 350px;
   width: 600px;
   display: inline;
   float: left;
-  background-position: 100% center;
-  background-position: 0 center;
 }
 
-div.kitton-two:hover {
-  background-position: 0 center;
-  background-position: 100% center;
+img {
+  height: 200px;
+  position: absolute;
+  top: 2em;
+}
 
+.kitton-wrapper-two img {
+  -webkit-animation: kitton-down infinite 3s ease-in-out;
+}
+
+.kitton-wrapper-two img:hover {
+  -webkit-animation: kitton-run infinite 3s ease-in-out;
 }
